@@ -9,11 +9,6 @@
         <module name="SpringStartCh02_3" />
         <module name="SpringStartCh02" />
         <module name="SpringStartCh03_1" />
-      </profile>
-      <profile name="Annotation profile for SpringStartHere" enabled="true">
-        <sourceOutputDir name="../SpringStartCh02_3/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../SpringStartCh02_3/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="SpringStartCh02_2" />
       </profile>
     </annotationProcessing>

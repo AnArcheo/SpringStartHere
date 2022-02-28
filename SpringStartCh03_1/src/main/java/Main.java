@@ -14,11 +14,16 @@ public class Main {
 
         System.out.println("Parrot's name: " + parrot.getName());
 
-        System.out.println("Person's parrot: " + person.getParrot()); // to prove that there is no relationship between the instances
+        System.out.println("Person's parrot: " + person.getParrot()); // if there is no relationship between the instances
                                                                         // prints null
 // output:
 //        Person's name: Ella
 //        Parrot's name: Koko
 //        Person's parrot: null
+
+        //output when has-A relationship exists:
+//        Person's name: Ella
+//        Parrot's name: Koko
+//        Person's parrot: Parrot: Koko
     }
 }
