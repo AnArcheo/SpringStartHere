@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 public class Person {
 
     private String name = "Ella";
+
+    //Autowired to inject the values through the class fields
+
     @Autowired //instruct Spring to provide bean from its context
     private Parrot parrot; //and set it directly as the value of the field; it is a way to establish relationship
 
