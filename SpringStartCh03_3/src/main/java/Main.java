@@ -1,5 +1,4 @@
 import config.ProjectConfig;
-import domains.Parrot;
 import domains.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
