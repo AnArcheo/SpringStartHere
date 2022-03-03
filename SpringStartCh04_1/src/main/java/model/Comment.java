@@ -1,6 +1,6 @@
 package model;
 
-public class Comments {
+public class Comment {
 
     private String author;
 
