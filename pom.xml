@@ -18,6 +18,7 @@
         <module>SpringStartCh03_4</module>
         <module>SpringStartCh03_5</module>
         <module>SpringStartCh03_6</module>
+        <module>SpringStartCh04_1</module>
     </modules>
 
     <properties>

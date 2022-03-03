@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringStartCh03_2" />
+        <module name="SpringStartCh04_1" />
         <module name="SpringStartCh03_3" />
         <module name="SpringStartCh03_5" />
         <module name="SpringStartCh03_6" />
