@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/annaluczak/springBootProjects/SpringStartHere/SpringStartCh04_1/src/main/java</OriginalElement>
+  <nodes>
+    <node x="750.5" y="293.5">proxies.EmailNotificationProxy</node>
+    <node x="472.609126984127" y="152.0">proxies.CommentNotificationProxy</node>
+    <node x="372.35811072396433" y="-11.999999999999993">model.Comment</node>
+    <node x="200.31349206349202" y="446.0">main.Main</node>
+    <node x="268.5" y="271.0">services.CommentService</node>
+    <node x="10.5" y="293.5">repositories.DBCommentRepository</node>
+    <node x="163.70059039876114" y="146.84756097560975">repositories.CommentRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="proxies.EmailNotificationProxy" target="proxies.CommentNotificationProxy" relationship="REALIZATION">
+      <point x="-52.865853658536594" y="-39.585365853658516" />
+      <point x="815.6341463414634" y="179.5" />
+      <point x="126.0" y="0.0" />
+    </edge>
+    <edge source="repositories.CommentRepository" target="model.Comment" relationship="DEPENDENCY">
+      <point x="118.99987301587299" y="0.0" />
+      <point x="387.45050000000003" y="174.34756097560975" />
+      <point x="387.45050000000003" y="107.42682926829269" />
+      <point x="386.95121951219517" y="107.42682926829269" />
+      <point x="-50.406891211769164" y="51.90853658536586" />
+    </edge>
+    <edge source="proxies.CommentNotificationProxy" target="model.Comment" relationship="DEPENDENCY">
+      <point x="-118.91400503290748" y="-24.67073170731706" />
+      <point x="479.6951219512195" y="109.48780487804879" />
+      <point x="479.6951219512195" y="87.84756097560977" />
+      <point x="42.337011227255175" y="49.84756097560976" />
+    </edge>
+    <edge source="main.Main" target="proxies.EmailNotificationProxy" relationship="CREATE">
+      <point x="82.0" y="0.0" />
+      <point x="868.5" y="485.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="services.CommentService" target="proxies.CommentNotificationProxy" relationship="TO_ONE">
+      <point x="99.10912698412699" y="-61.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="proxies.EmailNotificationProxy" target="model.Comment" relationship="DEPENDENCY">
+      <point x="0.0" y="-39.0" />
+      <point x="868.5" y="18.804878048780502" />
+      <point x="65.00774293457226" y="-19.195121951219505" />
+    </edge>
+    <edge source="repositories.DBCommentRepository" target="model.Comment" relationship="DEPENDENCY">
+      <point x="-66.1219512195122" y="-38.55487804878044" />
+      <point x="63.3780487804878" y="58.32926829268295" />
+      <point x="-68.95567169957411" y="20.32926829268294" />
+    </edge>
+    <edge source="services.CommentService" target="repositories.CommentRepository" relationship="TO_ONE">
+      <point x="-162.640873015873" y="-61.5" />
+      <point x="367.3719512195122" y="271.0" />
+      <point x="367.3719512195122" y="201.84756097560975" />
+      <point x="54.15853658536582" y="27.5" />
+    </edge>
+    <edge source="services.CommentService" target="repositories.CommentRepository" relationship="DEPENDENCY">
+      <point x="-216.6280487804878" y="-60.195121951219505" />
+      <point x="282.8719512195122" y="239.0" />
+      <point x="282.70059039876116" y="239.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="services.CommentService" target="proxies.CommentNotificationProxy" relationship="DEPENDENCY">
+      <point x="140.95121951219517" y="-61.225609756097526" />
+      <point x="640.4512195121952" y="271.2743902439025" />
+      <point x="640.4512195121952" y="260.45426829268297" />
+      <point x="640.4512195121952" y="226.96341463414637" />
+      <point x="640.4512195121952" y="204.2926829268293" />
+      <point x="41.84209252806818" y="24.792682926829286" />
+    </edge>
+    <edge source="main.Main" target="model.Comment" relationship="CREATE">
+      <point x="-82.00000000000003" y="0.0" />
+      <point x="-7.0" y="485.0" />
+      <point x="-7.0" y="21.231707317073194" />
+      <point x="-57.62030584591557" y="-16.768292682926813" />
+    </edge>
+    <edge source="main.Main" target="services.CommentService" relationship="CREATE">
+      <point x="40.74748354626405" y="-34.42073170731703" />
+      <point x="323.0609756097561" y="386.68902439024396" />
+      <point x="334.3963414634147" y="386.68902439024396" />
+      <point x="-165.10365853658533" y="56.25000000000006" />
+    </edge>
+    <edge source="main.Main" target="repositories.DBCommentRepository" relationship="CREATE">
+      <point x="-41.31349206349205" y="-39.0" />
+      <point x="111.5" y="39.0" />
+    </edge>
+    <edge source="repositories.DBCommentRepository" target="repositories.CommentRepository" relationship="REALIZATION">
+      <point x="-20.78048780487805" y="-36.49390243902434" />
+      <point x="108.71951219512195" y="174.34756097560975" />
+      <point x="-119.00000000000003" y="0.0" />
+    </edge>
+    <edge source="services.CommentService" target="model.Comment" relationship="DEPENDENCY">
+      <point x="-63.085365853658516" y="-60.195121951219505" />
+      <point x="436.4146341463415" y="239.0" />
+      <point x="437.1548586914441" y="239.0" />
+      <point x="437.1548586914441" y="83.72560975609758" />
+      <point x="-0.943476577622846" y="45.725609756097576" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9704142011834319" showDependencies="true" x="527.6128048780488" y="262.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
