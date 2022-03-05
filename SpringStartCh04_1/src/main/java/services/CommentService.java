@@ -1,14 +1,19 @@
 package services;
 
 import model.Comment;
+import org.springframework.stereotype.Component;
 import proxies.CommentNotificationProxy;
 import repositories.CommentRepository;
 
+@Component
 public class CommentService {
 
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
-
+    // because here is one constructor @Autowired is optional
+    // Spring uses this constructor to create the bean and injects
+    // references from its context in the parameter
+    //when creating the instance
     public CommentService(CommentRepository commentRepository,
                           CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
