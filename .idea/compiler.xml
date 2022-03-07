@@ -8,10 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringStartCh04_1" />
         <module name="SpringStartCh03_3" />
+        <module name="SpringStartCh05_1" />
         <module name="SpringStartCh03_4" />
+        <module name="SpringStartCh05_2" />
         <module name="SpringStartCh03_5" />
         <module name="SpringStartCh03_6" />
-        <module name="SpringStartCho05_1" />
         <module name="SpringStartCh02" />
         <module name="SpringStartCh03_1" />
         <module name="SpringStartCh02_2" />
