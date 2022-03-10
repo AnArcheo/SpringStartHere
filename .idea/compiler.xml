@@ -7,29 +7,30 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringStartCh04_1" />
-        <module name="SpringStartCh03_2" />
+        <module name="SpringStartCh02_3" />
+        <module name="SpringStartCh03_3" />
         <module name="SpringStartCh03_4" />
         <module name="SpringStartCh05_2" />
         <module name="SpringStartCh06_1" />
         <module name="SpringStartCh03_5" />
         <module name="SpringStartCh05_3" />
+        <module name="SpringStartCh06_2" />
         <module name="SpringStartCh03_6" />
-        <module name="SpringStartCho05_1" />
         <module name="SpringStartCh02" />
+        <module name="SpringStartCho05_1" />
         <module name="SpringStartCh03_1" />
+      </profile>
+      <profile name="Annotation profile for SpringStartCh02_2" enabled="true">
+        <sourceOutputDir name="../SpringStartCh02_3/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../SpringStartCh02_3/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="SpringStartCh02_2" />
       </profile>
-      <profile name="Annotation profile for SpringStartCh02_3" enabled="true">
-        <sourceOutputDir name="../SpringStartCh02_2/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../SpringStartCh02_2/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="SpringStartCh02_3" />
-      </profile>
       <profile name="Annotation profile for SpringStartHere" enabled="true">
-        <sourceOutputDir name="../SpringStartCh03_2/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../SpringStartCh03_2/target/generated-test-sources/test-annotations" />
+        <sourceOutputDir name="../SpringStartCh03_3/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../SpringStartCh03_3/target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringStartCh03_3" />
+        <module name="SpringStartCh03_2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
