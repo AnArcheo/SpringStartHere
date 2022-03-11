@@ -5,6 +5,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Logger;
 
 @Aspect
@@ -14,6 +15,7 @@ public class LoggingAspect {
     public Object log(ProceedingJoinPoint joinPoint) throws Throwable{
         String methodName = joinPoint.getSignature().getName();
         Object[] arguments = joinPoint.getArgs();
+
 
         logger.info("Method " + methodName +
                 " with parameters " + Arrays.asList(arguments) +
