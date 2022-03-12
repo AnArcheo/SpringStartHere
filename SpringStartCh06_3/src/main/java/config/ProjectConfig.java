@@ -1,6 +1,7 @@
 package config;
 
 import aspect.LoggingAspect;
+import aspect.SecurityAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,11 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class ProjectConfig {
     //add instance of the LoggingAspect class to spring context
     @Bean
-    public LoggingAspect aspect() {
+    public LoggingAspect LoggingAspect() {
         return new LoggingAspect();
+    }
+    @Bean
+    public SecurityAspect securityAspect(){
+        return new SecurityAspect();
     }
 }

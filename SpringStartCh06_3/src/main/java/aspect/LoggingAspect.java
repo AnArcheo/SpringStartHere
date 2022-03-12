@@ -3,11 +3,13 @@ package aspect;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
 
 import java.util.Arrays;
 import java.util.logging.Logger;
 
 @Aspect
+@Order(2)
 public class LoggingAspect {
     private Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
@@ -16,14 +18,14 @@ public class LoggingAspect {
         String methodName = joinPoint.getSignature().getName();
         Object[] arguments = joinPoint.getArgs();
 
-        logger.info("Method " + methodName +
+        logger.info("Logging Aspect: Method " + methodName +
                 " with parameters: " + Arrays.asList(arguments));
 
-        Object returnedByMathod = joinPoint.proceed();
+        Object returnedByMethod = joinPoint.proceed();
 
-        logger.info("Method executed and returned " + returnedByMathod);
+        logger.info("Logging Aspect: Method executed and returned " + returnedByMethod);
 
-        return returnedByMathod;
+        return returnedByMethod;
     }
 
     public void setLogger(Logger logger){
