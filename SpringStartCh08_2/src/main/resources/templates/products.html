@@ -11,14 +11,22 @@
 
   <table>
     <tr>
-      <th>PRODUCT NAME</th>
-      <th>PRODUCT PRICE</th>
+      <th>PRODUCT NAME  </th>
+
+      <th>  PRODUCT PRICE</th>
     </tr>
 <!--    iterate collection and display table-->
     <tr th:each="p : ${products}">
       <td th:text="${p.name}"></td>
       <td th:text="${p.price}"></td>
 
+<!--      add products-->
+      <h2>Add a product</h2>
+      <form action="/products" method="post"><br/>
+        Name: <input type="text" name="name"><br/>
+        Price: <input typr="number" step="any" name="price">
+        <button type="submit">Add product</button>
+      </form>
     </tr>
   </table>
 </body>
