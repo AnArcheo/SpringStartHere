@@ -1,9 +1,10 @@
 package com.example.springstartch08_2.controllers;
 
+import com.example.springstartch08_2.model.Product;
 import com.example.springstartch08_2.services.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class ProductsController {
@@ -13,11 +14,31 @@ public class ProductsController {
     public ProductsController(ProductService productService) {
         this.productService = productService;
     }
-    @RequestMapping("/products") // requestmapping by default uses http get method
+    // HTTP GET
+    @GetMapping("/products") // requestmapping by default uses http get method
     public String viewProducts(Model model){ // model param used to send data to view
         var products = productService.findAll(); // get the list of products from service
         model.addAttribute("products", products); //send the product list to view
 
         return "/products"; // return the view name that will be taken and rendered by dispatcher servlet
     }
+
+    //HTTP POST (adding a product)
+    @PostMapping(value = "/products")
+    public String addProduct(@RequestParam String name,
+                             @RequestParam Double price,
+                             Model model){
+        Product product = new Product();
+        product.setName(name);
+        product.setPrice(price);
+        //add product
+        productService.addProduct(product);
+
+        //get the list of products and send it to the view
+        var p = productService.findAll();
+        model.addAttribute("products", p);
+
+        return "/products"; // return the name of the view
+    }
+
 }
