@@ -19,7 +19,8 @@
     <tr th:each="p : ${products}">
       <td th:text="${p.name}"></td>
       <td th:text="${p.price}"></td>
-
+    </tr>
+  </table>
 <!--      add products-->
       <h2>Add a product</h2>
       <form action="/products" method="post"><br/>
@@ -27,7 +28,7 @@
         Price: <input typr="number" step="any" name="price">
         <button type="submit">Add product</button>
       </form>
-    </tr>
-  </table>
+
+
 </body>
 </html>
