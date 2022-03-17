@@ -25,20 +25,25 @@ public class ProductsController {
 
     //HTTP POST (adding a product)
     @PostMapping(value = "/products")
-    public String addProduct(@RequestParam String name,
-                             @RequestParam Double price,
-                             Model model){
-        Product product = new Product();
-        product.setName(name);
-        product.setPrice(price);
-        //add product
-        productService.addProduct(product);
+    public String addProduct(Product product, Model model){
 
-        //get the list of products and send it to the view
-        var p = productService.findAll();
-        model.addAttribute("products", p);
+            productService.addProduct(product);
 
-        return "/products"; // return the name of the view
+            //get the list of products and send it to the view
+            var p = productService.findAll();
+            model.addAttribute("products", p);
+
+            return "/products"; // return the name of the view
+
+//@RequestParam String name - replaced with Product param
+//@RequestParam Double price - replaced with Product param
+
+//        Product product = new Product();
+//        product.setName(name);
+//        product.setPrice(price);
+            //add product
     }
 
 }
+
+
