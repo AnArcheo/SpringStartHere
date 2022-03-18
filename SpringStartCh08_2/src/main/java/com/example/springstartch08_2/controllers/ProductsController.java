@@ -25,7 +25,7 @@ public class ProductsController {
 
     //HTTP POST (adding a product)
     @PostMapping(value = "/products")
-    public String addProduct(Product product, Model model){
+    public String addProduct(Product product, Model model){ //Spring will know to create instance of Product
 
             productService.addProduct(product);
 
