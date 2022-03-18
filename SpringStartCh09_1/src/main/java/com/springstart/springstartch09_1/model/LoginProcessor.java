@@ -1,4 +1,4 @@
-package com.springstart.controllers;
+package com.springstart.springstartch09_1.model;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
