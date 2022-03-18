@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/annaluczak/springBootProjects/SpringStartHere/SpringStartCh09_1/src/main/java/com/springstart/springstartch09_1</OriginalElement>
+  <nodes>
+    <node x="0.0" y="239.0">com.springstart.springstartch09_1.SpringStartCh091Application</node>
+    <node x="0.0" y="88.0">com.springstart.springstartch09_1.model.LoginProcessor</node>
+    <node x="0.5" y="166.0">com.springstart.springstartch09_1.controllers.LoginController</node>
+    <node x="185.0" y="88.0">com.springstart.springstartch09_1.controllers.MainController</node>
+    <node x="25.250000000000014" y="0.0">com.springstart.springstartch09_1.services.LoggedUserManagementService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.springstart.springstartch09_1.controllers.LoginController" target="com.springstart.springstartch09_1.model.LoginProcessor" relationship="DEPENDENCY">
+      <point x="15.0" y="-14.0" />
+      <point x="15.0" y="14.0" />
+    </edge>
+    <edge source="com.springstart.springstartch09_1.controllers.MainController" target="com.springstart.springstartch09_1.services.LoggedUserManagementService" relationship="TO_ONE">
+      <point x="54.75" y="-14.0" />
+      <point x="146.5" y="14.0" />
+    </edge>
+    <edge source="com.springstart.springstartch09_1.model.LoginProcessor" target="com.springstart.springstartch09_1.services.LoggedUserManagementService" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="-90.25" y="14.0" />
+    </edge>
+    <edge source="com.springstart.springstartch09_1.controllers.MainController" target="com.springstart.springstartch09_1.services.LoggedUserManagementService" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.0" />
+      <point x="91.75" y="14.0" />
+    </edge>
+    <edge source="com.springstart.springstartch09_1.controllers.LoginController" target="com.springstart.springstartch09_1.model.LoginProcessor" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.springstart.springstartch09_1.model.LoginProcessor" target="com.springstart.springstartch09_1.services.LoggedUserManagementService" relationship="DEPENDENCY">
+      <point x="75.0" y="-14.0" />
+      <point x="-15.25" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="172.0" y="133.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
