@@ -17,24 +17,36 @@ public class PaymentController {
     public PaymentController(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
+    //makePayment() method before applying/adding ExceptionControllerAdvice
+//    @PostMapping("/payment")
+//    public ResponseEntity<?> makePayment(){
+//        // try calling processPayment() method
+//        try{
+//            PaymentDetails paymentDetails = paymentService.processPayment();
+//            //if calling the service succeed it will return HTTP response with status Accepted
+//            //and the paymentDetails instance as a response body
+//            return ResponseEntity
+//                    .status(HttpStatus.ACCEPTED)
+//                    .body(paymentDetails);
+//        } catch (NotEnoughMoneyException e){
+//            ErrorDetails errorDetails = new ErrorDetails();
+//            errorDetails.setMessage("Not enough money to make a payment.");
+//            return ResponseEntity
+//                    .badRequest()
+//                    .body(errorDetails);
+//        }
+//    }
 
+    // makePayment() method after adding ExceptionControllerAdvice
     @PostMapping("/payment")
     public ResponseEntity<?> makePayment(){
-        // try calling processPayment() method
-        try{
-            PaymentDetails paymentDetails = paymentService.processPayment();
-            //if calling the service succeed it will return HTTP response with status Accepted
-            //and the paymentDetails instance as a response body
-            return ResponseEntity
-                    .status(HttpStatus.ACCEPTED)
-                    .body(paymentDetails);
-        } catch (NotEnoughMoneyException e){
-            ErrorDetails errorDetails = new ErrorDetails();
-            errorDetails.setMessage("Not enough money to make a payment.");
-            return ResponseEntity
-                    .badRequest()
-                    .body(errorDetails);
-        }
-    }
 
+        PaymentDetails paymentDetails = paymentService.processPayment();
+        //if calling the service succeed it will return HTTP response with status Accepted
+        //and the paymentDetails instance as a response body
+        return ResponseEntity
+                .status(HttpStatus.ACCEPTED)
+                .body(paymentDetails);
+
+    }
 }
