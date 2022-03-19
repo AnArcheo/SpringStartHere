@@ -28,6 +28,7 @@
         <module name="SpringStartCh10_1" />
         <module name="SpringStartCho05_1" />
         <module name="SpringStartCh10_2" />
+        <module name="SpringStartCh10_3" />
         <module name="SpringStartCh03_1" />
       </profile>
       <profile name="Annotation profile for SpringStartCh03_3" enabled="true">
@@ -63,6 +64,7 @@
       <module name="SpringStartCh09_1" options="-parameters" />
       <module name="SpringStartCh10_1" options="-parameters" />
       <module name="SpringStartCh10_2" options="-parameters" />
+      <module name="SpringStartCh10_3" options="-parameters" />
       <module name="dynamicView" options="-parameters" />
     </option>
   </component>
