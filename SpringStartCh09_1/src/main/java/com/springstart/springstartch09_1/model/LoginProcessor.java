@@ -1,6 +1,7 @@
 package com.springstart.springstartch09_1.model;
 
 import com.springstart.springstartch09_1.services.LoggedUserManagementService;
+import com.springstart.springstartch09_1.services.LoginCountService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
@@ -9,13 +10,15 @@ import org.springframework.web.context.annotation.RequestScope;
 public class LoginProcessor {
 
     private final LoggedUserManagementService loggedUserManagementService;
-
-    public LoginProcessor(LoggedUserManagementService loggedUserManagementService) {
-        this.loggedUserManagementService = loggedUserManagementService;
-    }
+    private final LoginCountService loginCountService;
 
     private String username;
     private String password;
+
+    public LoginProcessor(LoggedUserManagementService loggedUserManagementService, LoginCountService loginCountService) {
+        this.loggedUserManagementService = loggedUserManagementService;
+        this.loginCountService = loginCountService;
+    }
 
 
     public String getUsername() {
@@ -35,6 +38,8 @@ public class LoginProcessor {
     }
 
     public boolean login(){  // bean defines a method for implementing the login logic
+        loginCountService.increment(); // increment count for each login attempt
+
         String username = this.getUsername();
         String password = this.getPassword();
 
