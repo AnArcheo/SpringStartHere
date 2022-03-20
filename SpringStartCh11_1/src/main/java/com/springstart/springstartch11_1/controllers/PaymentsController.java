@@ -1,9 +1,7 @@
 package com.springstart.springstartch11_1.controllers;
 
 import com.springstart.springstartch11_1.model.Payment;
-import com.springstart.springstartch11_1.proxy.PaymentProxy;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import com.springstart.springstartch11_1.proxy.PaymentsProxy;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -13,20 +11,19 @@ import java.util.UUID;
 
 
 @RestController
-public class PaymentController {
+public class PaymentsController {
 
-    private final PaymentProxy paymentProxy;
+    private final PaymentsProxy paymentsProxy;
 
-    public PaymentController(PaymentProxy paymentProxy) {
-        this.paymentProxy = paymentProxy;
+    public PaymentsController(PaymentsProxy paymentsProxy) {
+        this.paymentsProxy = paymentsProxy;
     }
 
     @PostMapping("/payment")
     public Payment createPayment(
-            @RequestBody Payment payment){
-
+            @RequestBody Payment payment
+    ) {
         String requestId = UUID.randomUUID().toString();
-
-        return paymentProxy.createPayment(requestId, payment);
+        return paymentsProxy.createPayment(requestId, payment);
     }
 }

@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name="payments", url = "${name.service.url}") // REST client configuration,defines a name & end point base URI
-public interface PaymentProxy {
+@FeignClient(name = "payments", url = "${name.service.url}/")
+public interface PaymentsProxy {
 
-    @PostMapping("/payment")  // end point path
+    @PostMapping("/payment")
     Payment createPayment(
-            @RequestHeader String requestId, // defined header and body
+            @RequestHeader String requestId,
             @RequestBody Payment payment);
+
 }
