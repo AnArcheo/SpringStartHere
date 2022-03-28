@@ -33,6 +33,7 @@
         <module name="SpringStartCh10_3" />
         <module name="SpringStartCh12_1" />
         <module name="SpringStartCh13_1" />
+        <module name="SpringStartCh14_1" />
       </profile>
       <profile name="Annotation profile for SpringStartCh03_3" enabled="true">
         <sourceOutputDir name="../SpringStartCh03_4/target/generated-sources/annotations" />
@@ -71,6 +72,7 @@
       <module name="SpringStartCh11_1" options="-parameters" />
       <module name="SpringStartCh12_1" options="-parameters" />
       <module name="SpringStartCh13_1" options="-parameters" />
+      <module name="SpringStartCh14_1" options="-parameters" />
       <module name="dynamicView" options="-parameters" />
     </option>
   </component>
