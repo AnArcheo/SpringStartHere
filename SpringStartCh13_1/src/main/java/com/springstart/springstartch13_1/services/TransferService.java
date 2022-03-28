@@ -32,6 +32,8 @@ public class TransferService {
         accountRepository.changeAmount(idSender, senderNewAmount);
         //set new amount for the receiver account
         accountRepository.changeAmount(idReceiver, receiverNewAmount);
+
+        throw new RuntimeException("Oh no! Something went wrong!");
     }
 
     //service method that returns all existing accounts
