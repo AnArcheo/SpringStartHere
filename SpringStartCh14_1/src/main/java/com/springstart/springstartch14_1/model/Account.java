@@ -1,6 +1,8 @@
 package com.springstart.springstartch14_1.model;
 
-import javax.persistence.Id;
+
+import org.springframework.data.annotation.Id;
+
 import java.math.BigDecimal;
 
 public class Account {
