@@ -66,6 +66,6 @@ public class TransferServiceWithAnnotationUnitTests {
         assertThrows(AccountNotFoundException.class,
                 ()->transferService.transferMoney(1L,2L,new BigDecimal(100L)));
 
-        verify(accountRepository, never()).changeAmount(anyLong(), any());
+        verify(accountRepository, never()).changeAmount(anyLong(), any());// never() assures that changeAmount() hasn't been called
     }
 }
