@@ -33,4 +33,16 @@ class LoginControllerTest {
 
         verify(model).addAttribute("message", "You are now logged in.");
     }
+
+    @Test
+    void postLoginFailed() {
+
+        given(loginProcessor.login()).willReturn(false); //return true when login() is called
+
+        String result = loginController.postLogin("username", "password", model);
+
+        assertEquals("/login", result);
+
+        verify(model).addAttribute("message", "Login Failed");
+    }
 }
